@@ -1,0 +1,29 @@
+{
+  "name": "budge",
+  "version": "0.0.0",
+  "description": "Returns the last `n - x` elements where `n` is the length of the list, and `x` is the count of first set of elements; defaults to 1.",
+  "main": "budge.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volkovasystems/budge.git"
+  },
+  "keywords": [
+    "shift",
+    "array",
+    "list",
+    "last",
+    "budge"
+  ],
+  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volkovasystems/budge/issues"
+  },
+  "homepage": "https://github.com/volkovasystems/budge#readme",
+  "dependencies": {
+    "raze": "0.0.5"
+  }
+}
