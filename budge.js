@@ -101,7 +101,7 @@ var budge = function budge( list, count, reverse ){
 	}
 
 	if( count > list.length ){
-		throw new Error( "count overflow" );
+		return [ ];
 	}
 
 	reverse = optfor( arguments, BOOLEAN ) || false;
