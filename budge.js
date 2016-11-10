@@ -46,25 +46,35 @@
 
 		A reverse flag will be applied to the count, by default,
 			the count refers to the first x elements, reversing
-			will focus to the last x elements.
+			will focus to the last x elements. By default, this is false.
 
 		By default, count is equal to 1 which will pop the first element.
 	@end-module-documentation
 
 	@include:
 		{
+			"doubt": "doubt",
+			"optfor": "optfor",
 			"raze": "raze"
 		}
 	@end-include
 */
 
-if( typeof window == "undefined" ){
+if( typeof require == "function" ){
+	var doubt = require( "doubt" );
+	var optfor = require( "optfor" );
 	var raze = require( "raze" );
 }
 
-if( typeof window != "undefined" &&
-	!( "raze" in window ) )
-{
+if( typeof window != "undefined" && !( "doubt" in window ) ){
+	throw new Error( "doubt is not defined" );
+}
+
+if( typeof window != "undefined" && !( "optfor" in window ) ){
+	throw new Error( "optfor is not defined" );
+}
+
+if( typeof window != "undefined" && !( "raze" in window ) ){
 	throw new Error( "raze is not defined" );
 }
 
@@ -79,23 +89,36 @@ var budge = function budge( list, count, reverse ){
 		@end-meta-configuration
 	*/
 
-	count = count || 1;
-	if( typeof count != "number" ){
-		throw new Error( "invalid count" );
+	if( !doubt( list ).ARRAY ){
+		throw new Error( "invalid list" );
 	}
 
-	if( count == 1 ){
-		list = raze( list ).reverse( );
-		list.pop( );
-		list = list.reverse( );
+	list = raze( list );
 
-	}else{
+	count = optfor( arguments, NUMBER ) || 1;
+	if( count < 0 ){
+		count = 1;
+	}
+
+	if( count > list.length ){
+		throw new Error( "count overflow" );
+	}
+
+	reverse = optfor( arguments, BOOLEAN ) || false;
+
+	if( count == 1 ){
 		if( reverse ){
-			count = list.length - count;
+			list.pop( );
+
+		}else{
+			list = list.reverse( );
+			list.pop( );
+			list = list.reverse( );
 		}
 
+	}else{
 		while( count ){
-			list = budge( list );
+			list = budge( list, reverse );
 
 			count--;
 		}
@@ -104,6 +127,6 @@ var budge = function budge( list, count, reverse ){
 	return list;
 };
 
-if( typeof module != "undefined" ){
+if( typeof module != "undefined" && typeof module.exports != "undefined" ){
 	module.exports = budge;
 }
