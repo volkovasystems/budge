@@ -89,7 +89,7 @@ var budge = function budge( list, count, reverse ){
 		@end-meta-configuration
 	*/
 
-	if( !doubt( list ).ARRAY ){
+	if( !doubt( list ).AS_ARRAY ){
 		throw new Error( "invalid list" );
 	}
 

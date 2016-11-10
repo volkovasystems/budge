@@ -1,6 +1,6 @@
 {
   "name": "budge",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Returns the last `n - x` elements where `n` is the length of the list, and `x` is the count of first set of elements; defaults to 1.",
   "main": "budge.js",
   "authors": [
