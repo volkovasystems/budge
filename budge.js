@@ -53,32 +53,18 @@
 
 	@include:
 		{
+			"depher", "depher",
 			"doubt": "doubt",
-			"optfor": "optfor",
 			"raze": "raze"
 		}
 	@end-include
 */
 
-if( typeof require == "function" ){
-	var doubt = require( "doubt" );
-	var optfor = require( "optfor" );
-	var raze = require( "raze" );
-}
+const depher = require( "depher" );
+const doubt = require( "doubt" );
+const raze = require( "raze" );
 
-if( typeof window != "undefined" && !( "doubt" in window ) ){
-	throw new Error( "doubt is not defined" );
-}
-
-if( typeof window != "undefined" && !( "optfor" in window ) ){
-	throw new Error( "optfor is not defined" );
-}
-
-if( typeof window != "undefined" && !( "raze" in window ) ){
-	throw new Error( "raze is not defined" );
-}
-
-var budge = function budge( list, count, reverse ){
+const budge = function budge( list, count, reverse ){
 	/*;
 		@meta-configuration:
 			{
@@ -93,9 +79,11 @@ var budge = function budge( list, count, reverse ){
 		throw new Error( "invalid list" );
 	}
 
+	let parameter = raze( arguments );
+
 	list = raze( list );
 
-	count = optfor( arguments, NUMBER ) || 1;
+	count = depher( parameter, NUMBER, 1 );
 	if( count < 0 ){
 		count = 1;
 	}
@@ -104,7 +92,7 @@ var budge = function budge( list, count, reverse ){
 		return [ ];
 	}
 
-	reverse = optfor( arguments, BOOLEAN ) || false;
+	reverse = depher( parameter, BOOLEAN, false );
 
 	if( count == 1 ){
 		if( reverse ){
@@ -127,6 +115,4 @@ var budge = function budge( list, count, reverse ){
 	return list;
 };
 
-if( typeof module != "undefined" && typeof module.exports != "undefined" ){
-	module.exports = budge;
-}
+module.exports = budge;
