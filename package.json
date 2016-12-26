@@ -1,10 +1,13 @@
 {
   "name": "budge",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Returns the last `n - x` elements where `n` is the length of the list, and `x` is the count of first set of elements; defaults to 1.",
   "main": "budge.js",
+  "support": "budge.support.js",
+  "deploy": "budge.deploy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel budge.js -o budge.support.js && webpack",
+    "test": "mocha budge-test.js"
   },
   "repository": {
     "type": "git",
@@ -24,8 +27,17 @@
   },
   "homepage": "https://github.com/volkovasystems/budge#readme",
   "dependencies": {
-    "depher": "^0.4.0",
-    "doubt": "^0.4.0",
-    "raze": "^0.5.0"
+    "babel-runtime": "^6.20.0",
+    "depher": "^0.5.0",
+    "doubt": "^0.6.0",
+    "raze": "^0.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-latest": "^6.16.0",
+    "source-map-loader": "^0.1.5",
+    "webpack": "^1.14.0"
   }
 }
