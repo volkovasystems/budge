@@ -5,7 +5,7 @@
 		The MIT License (MIT)
 		@mit-license
 
-		Copyright (@c) 2016 Richeve Siodina Bebedor
+		Copyright (@c) 2017 Richeve Siodina Bebedor
 		@email: richeve.bebedor@gmail.com
 
 		Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,9 @@
 			"file": "budge.js",
 			"module": "budge",
 			"author": "Richeve S. Bebedor",
+			"contributors": [
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+			],
 			"eMail": "richeve.bebedor@gmail.com",
 			"repository": "https://github.com/volkovasystems/budge.git",
 			"test": "budge-test.js",
@@ -75,7 +78,7 @@ const budge = function budge( list, count, reverse ){
 		@end-meta-configuration
 	*/
 
-	if( !doubt( list ).AS_ARRAY ){
+	if( !doubt( list, AS_ARRAY ) ){
 		throw new Error( "invalid list" );
 	}
 

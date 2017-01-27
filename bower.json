@@ -1,12 +1,13 @@
 {
   "name": "budge",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Returns the last `n - x` elements where `n` is the length of the list, and `x` is the count of first set of elements; defaults to 1.",
   "main": "budge.js",
   "support": "budge.support.js",
   "deploy": "budge.deploy.js",
   "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -25,8 +26,8 @@
     "tests"
   ],
   "dependencies": {
-    "depher": "^0.5.0",
-    "doubt": "^0.6.0",
-    "raze": "^0.6.0"
+    "depher": "^0.8.0",
+    "doubt": "^0.10.0",
+    "raze": "^0.12.0"
   }
 }
