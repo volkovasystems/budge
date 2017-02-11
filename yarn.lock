@@ -65,6 +65,14 @@ are-we-there-yet@~1.1.2:
     delegates "^1.0.0"
     readable-stream "^2.0.0 || ^1.1.13"
 
+arid@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/arid/-/arid-0.12.0.tgz#9ab788ad7669bd3997de3319c230144101d07faa"
+  dependencies:
+    babel-runtime "^6.22.0"
+    doubt "^0.14.0"
+    truly "^0.11.0"
+
 arid@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/arid/-/arid-0.4.0.tgz#86f5e97242d2bdd08c7266559911e084bef6111f"
@@ -1088,15 +1096,15 @@ depher@^0.5.0:
     harden "^0.12.0"
     zelf "^0.4.0"
 
-depher@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/depher/-/depher-0.8.0.tgz#264040d527e55826b0317a6bd645ffa3e3422942"
+depher@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/depher/-/depher-0.9.0.tgz#119daa12dc52d39c307fe094afc06b375cd4935b"
   dependencies:
     babel-runtime "^6.22.0"
     dephall "^0.8.0"
-    doubt "^0.10.0"
-    falze "^0.5.0"
-    falzy "^0.10.0"
+    doubt "^0.14.0"
+    falze "^0.8.0"
+    falzy "^0.11.0"
     harden "^0.14.0"
     zelf "^0.6.0"
 
@@ -1183,6 +1191,15 @@ elliptic@^6.0.0:
 emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
+
+empt@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/empt/-/empt-0.10.0.tgz#00e128ad45cfdb0217e074c91ad43c0f04f3b6b8"
+  dependencies:
+    babel-runtime "^6.22.0"
+    doubt "^0.14.0"
+    kount "^0.7.0"
+    protype "^0.15.0"
 
 empt@^0.3.0:
   version "0.3.0"
@@ -1288,6 +1305,17 @@ falze@^0.5.0:
     empt "^0.5.0"
     falzy "^0.10.0"
     protype "^0.11.0"
+
+falze@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/falze/-/falze-0.8.0.tgz#d4dfbe54b12fa8812a6304801afe3a5a28bde06f"
+  dependencies:
+    arid "^0.12.0"
+    babel-runtime "^6.22.0"
+    doubt "^0.14.0"
+    empt "^0.10.0"
+    falzy "^0.11.0"
+    protype "^0.15.0"
 
 falzy@^0.10.0:
   version "0.10.0"
@@ -2633,6 +2661,13 @@ tough-cookie@~2.3.0:
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.3.2.tgz#f081f76e4c85720e6c37a5faced737150d84072a"
   dependencies:
     punycode "^1.4.1"
+
+truly@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/truly/-/truly-0.11.0.tgz#7465f07bbf0ffec1566458fdc71f37cf3ec54170"
+  dependencies:
+    babel-runtime "^6.22.0"
+    protype "^0.15.0"
 
 truly@^0.5.0:
   version "0.5.0"
