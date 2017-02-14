@@ -21,15 +21,15 @@ module.exports = {
 			"main"
 		]
 	},
-	"module": {
-		"rules": [
-			{
-				"enforce": "pre",
-				"test": /\.support\.js$/,
-				"loader": "source-map-loader"
-			}
-		]
-	},
+	// "module": {
+	// 	"rules": [
+	// 		{
+	// 			"enforce": "pre",
+	// 			"test": /\.support\.js$/,
+	// 			"loader": "source-map-loader"
+	// 		}
+	// 	]
+	// },
 	"output": {
 		"library": "budge",
 		"libraryTarget": "umd",
