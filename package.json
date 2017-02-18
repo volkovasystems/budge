@@ -7,7 +7,7 @@
   "deploy": "budge.deploy.js",
   "browser": "budge.deploy.js",
   "scripts": {
-    "build": "babel budge.js --out-file budge.support.js --source-maps && webpack --progress",
+    "build": "babel budge.js --out-file budge.support.js --source-maps && webpack --progress --display-modules",
     "test": "mocha budge-test.js"
   },
   "repository": {
