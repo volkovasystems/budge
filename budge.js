@@ -56,6 +56,7 @@
 
 	@include:
 		{
+			"arkount": "arkount",
 			"depher", "depher",
 			"doubt": "doubt",
 			"raze": "raze"
@@ -63,6 +64,7 @@
 	@end-include
 */
 
+const arkount = require( "arkount" );
 const depher = require( "depher" );
 const doubt = require( "doubt" );
 const raze = require( "raze" );
@@ -91,7 +93,7 @@ const budge = function budge( list, count, reverse ){
 		count = 1;
 	}
 
-	if( count > list.length ){
+	if( count > arkount( list ) ){
 		return [ ];
 	}
 
