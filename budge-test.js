@@ -1,6 +1,8 @@
 "use strict";
 
+const assert = require( "assert" );
 const budge = require( "./budge.js" );
 
-console.log( budge( [ 1, 2, 3 ], 2, true ) );
-console.log( budge( ) );
+assert.deepEqual( budge( [ 1, 2, 3 ], 2, true ), [ 1 ] );
+
+console.log( "ok" );
