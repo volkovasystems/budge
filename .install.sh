@@ -1,6 +1,5 @@
 yarn add \
 babel-runtime \
-arkount \
 depher \
 doubt \
 raze \
@@ -14,7 +13,6 @@ source-map-loader \
 webpack \
 --dev && \
 bower install \
-arkount \
 depher \
 doubt \
 raze \

@@ -45,6 +45,9 @@
 	@end-module-configuration
 
 	@module-documentation:
+		Returns the last `n - x` elements where `n` is the length of the list,
+			and `x` is the count of first set of elements; defaults to 1.
+
 		This is a non performant way to reduce the array element.
 
 		A reverse flag will be applied to the count, by default,
@@ -52,11 +55,12 @@
 			will focus to the last x elements. By default, this is false.
 
 		By default, count is equal to 1 which will pop the first element.
+
+		This will always return a new array.
 	@end-module-documentation
 
 	@include:
 		{
-			"arkount": "arkount",
 			"depher", "depher",
 			"doubt": "doubt",
 			"raze": "raze"
@@ -64,7 +68,6 @@
 	@end-include
 */
 
-const arkount = require( "arkount" );
 const depher = require( "depher" );
 const doubt = require( "doubt" );
 const raze = require( "raze" );
@@ -93,7 +96,7 @@ const budge = function budge( list, count, reverse ){
 		count = 1;
 	}
 
-	if( count > arkount( list ) ){
+	if( count > list.length ){
 		return [ ];
 	}
 
@@ -104,9 +107,7 @@ const budge = function budge( list, count, reverse ){
 			list.pop( );
 
 		}else{
-			list = list.reverse( );
-			list.pop( );
-			list = list.reverse( );
+			list = list.splice( 1 );
 		}
 
 	}else{
