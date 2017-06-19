@@ -1,6 +1,6 @@
 {
   "name": "budge",
-  "version": "0.30.0",
+  "version": "0.31.0",
   "description": "Returns the last `n - x` elements where `n` is the length of the list, and `x` is the count of first set of elements; defaults to 1.",
   "main": "budge.deploy.js",
   "support": "budge.support.js",
@@ -26,7 +26,7 @@
     "tests"
   ],
   "dependencies": {
-    "depher": "^0.34.0",
+    "depher": "^0.35.0",
     "doubt": "^0.27.0",
     "raze": "^0.30.0"
   }
