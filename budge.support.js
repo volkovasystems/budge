@@ -112,10 +112,8 @@ var budge = function budge(list, count, reverse) {
 		}
 
 	} else {
-		while (count) {
+		while (count--) {
 			list = budge(list, reverse);
-
-			count--;
 		}
 	}
 

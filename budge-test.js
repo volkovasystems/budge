@@ -8,4 +8,6 @@ assert.equal( Array.isArray( budge( [ 1, 2, 3 ], 2 ) ), true, "should return tru
 
 assert.deepEqual( budge( [ 1, 2, 3 ], true ), [ 1, 2 ], "should be equal" );
 
+assert.deepEqual( budge( [ 1, 2, 3 ], 2 ), [ 3 ], "should be equal" );
+
 console.log( "ok" );

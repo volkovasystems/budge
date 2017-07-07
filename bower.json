@@ -25,9 +25,13 @@
     "test",
     "tests"
   ],
+  "resolutions": {
+    "raze": "^0.32.0",
+    "doubt": "^0.29.0"
+  },
   "dependencies": {
     "depher": "^0.35.0",
-    "doubt": "^0.27.0",
-    "raze": "^0.30.0"
+    "doubt": "^0.29.0",
+    "raze": "^0.32.0"
   }
 }
